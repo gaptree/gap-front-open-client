@@ -1,0 +1,32 @@
+Arguments: 
+  /usr/bin/node /home/zjh/.yarn/bin/yarn.js link jest eslint sass-lint express webpack node-sass babel-core babel-jest babel-preset-env regenerator-runtime webpack-dev-middleware
+
+PATH: 
+  /home/zjh/.yarn/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/zjh/.fzf/bin:/home/zjh/.config/composer/vendor/bin:/home/zjh/src/arcanist/bin:/bin:/home/zjh/go/bin
+
+Yarn version: 
+  1.3.2-20171219.2126
+
+Node version: 
+  9.4.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: No registered module found called "webpack-dev-middleware".
+      at new MessageError (/home/zjh/.yarn/lib/cli.js:186:110)
+      at Object.<anonymous> (/home/zjh/.yarn/lib/cli.js:59508:17)
+      at Generator.next (<anonymous>)
+      at step (/home/zjh/.yarn/lib/cli.js:98:30)
+      at /home/zjh/.yarn/lib/cli.js:109:13
+      at <anonymous>
