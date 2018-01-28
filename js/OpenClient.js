@@ -1,19 +1,22 @@
 import {Request} from 'gap-front-request';
 
 export class OpenClient {
-    constructor(token, appOpts, request) {
+    constructor(accessToken, apps, request) {
         this.request = request || new Request();
 
-        this.token = token;
-        this.appOpts = appOpts;
+        this.accessToken = accessToken;
+        this.apps = apps;
 
-        this.request.addHeader('Authorization', 'Bearer ' + this.token);
+        if (this.accessToken) {
+            this.request.addHeader('Authorization', 'Bearer ' + this.accessToken);
+        }
+
         this.request.withCredentials = true;
     }
 
     call(appKey, apiName, params) {
-        let url = this.appOpts[appKey]['baseUrl']
-            + this.appOpts[appKey]['api'][apiName];
+        let url = this.apps[appKey]['baseUrl']
+            + this.apps[appKey]['api'][apiName];
 
         return this.request.postJson(url, params);
     }
